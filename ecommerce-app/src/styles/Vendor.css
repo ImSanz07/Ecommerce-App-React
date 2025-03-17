@@ -1,0 +1,10 @@
+h3{
+    text-align: center;
+}
+
+.vendor-container{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

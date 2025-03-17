@@ -1,0 +1,52 @@
+/* Container */
+.created-product-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.created-product-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table */
+.created-product-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.created-product-container th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.created-product-container th {
+    background-color: #007bff;
+    color: white;
+}
+
+.created-product-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.created-product-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Message when no products */
+.created-product-container p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}

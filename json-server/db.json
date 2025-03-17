@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": "7f4f",
+      "name": "Samsung Galaxy S21 Ultra",
+      "price": "75000",
+      "category": "electronics",
+      "description": "Samsung Galaxy S21 Ultra is an Android-based smartphone that is part of the Samsung Galaxy S series. It features a 6.8-inch Dynamic AMOLED display, 108MP primary sensor, 40MP front camera, 5000mAh battery, up to 16GB of RAM, and Exynos 2100 chipset."
+    },
+    {
+      "id": "a69f",
+      "name": "Apple Airpods Max 2",
+      "price": "59900",
+      "category": "electronics",
+      "description": "AirPods Max are wireless Bluetooth over-ear headphones designed by Apple, and released on December 15, 2020. They are Apple's highest-end option in the AirPods lineup, sold alongside the base model AirPods and mid-range AirPods Pro."
+    }
+  ],
+  "vendors": [
+    {
+      "id": "bbb5",
+      "businessName": "ABC Electronics",
+      "gstin": "5678",
+      "location": "Baramati",
+      "rating": 4.5
+    },
+    {
+      "id": "52dd",
+      "businessName": "XYZ Electronics",
+      "gstin": "123456",
+      "location": "Baramati",
+      "rating": 4.5
+    },
+    {
+      "id": "444b",
+      "businessName": "Rajput Rifles",
+      "gstin": "8970",
+      "location": "Jalgaon",
+      "rating": 4.5
+    },
+    {
+      "id": "812f",
+      "businessName": "Madhav Electronics",
+      "gstin": "1234",
+      "location": "Santacruz West",
+      "rating": 4.5
+    }
+  ],
+  "inventory":[
+    {
+      "id": "i1",
+      "productId": "7f4f",
+      "sellerId": "bbb5",
+      "gstin": "5678",
+      "price": 75000,
+      "quantity": 35
+    },
+    {
+      "id": "i2",
+      "productId": "7f4f",
+      "sellerId": "444b",
+      "gstin": "8970",
+      "price": 74000,
+      "quantity": 23
+    }
+  ]
+}
