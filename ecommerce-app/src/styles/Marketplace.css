@@ -77,6 +77,77 @@ td {
     cursor: pointer;
 }
 
-.marketplace-container button:hover {
-    background: #0056b3;
+.marketplace-container button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.marketplace-container button h3 {
+    display: inline;
+    text-align: right;
+    margin: 5px;
+}
+
+NavLink{
+
+}
+/* PRODUCT CARD STYLES */
+.product-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    background-color: #f9f9f9;
+}
+
+.product-card {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.product-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.product-card button:hover {
+    background-color: #0067d6;
+}
+
+@media (max-width: 600px) {
+    .product-card-container {
+        grid-template-columns: 1fr;
+    }
 }
