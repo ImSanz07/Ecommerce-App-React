@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import Products from './Products';
 import { getInventory } from '../../services/vendorService';
+import AddProduct from './AddProduct';
 
 const Inventory = () => {
     const location = useLocation();
@@ -39,6 +40,9 @@ const Inventory = () => {
             )}
             <hr></hr>
             <Products inventory={inventory} />
+
+
+            <AddProduct></AddProduct>
         </div>
     );
 };

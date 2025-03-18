@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { getAllProducts } from "../../services/productService";
 import "../../styles/Products.css";
+import AddProduct from "./AddProduct";
+import AddStock from "./AddStock";
+import { useLocation } from "react-router-dom";
 
 const Products = (props) => {
+  const location = useLocation();
+  const { gstin } = location.state || {};
   const [products, setProducts] = useState([]);
   const [enrichedInventory, setEnrichedInventory] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showAddStock, setShowAddStock] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -13,16 +20,22 @@ const Products = (props) => {
         setLoading(true);
         const data = await getAllProducts();
         setProducts(data);
+        console.log(props.inventory);
+        
 
-        // Only join tables after products are fetched
+        // Joining tables
         if (data.length > 0 && props.inventory) {
-          const enriched = props.inventory.map((item) => {
+          const enriched = props.inventory
+          .filter(item => item.sellerId === gstin) 
+          .map((item) => {
             const product = data.find((product) => product.id === item.productId);
             return {
               ...item,
-              product: product || {}, // Provide empty object as fallback
+              product: product || {},
             };
           });
+          
+          
           setEnrichedInventory(enriched);
         }
         setLoading(false);
@@ -39,6 +52,16 @@ const Products = (props) => {
     return <div>Loading products...</div>;
   }
 
+  const handleAddStock = () => {
+    setShowAddStock(!showAddStock);
+  }
+
+  const handleUpdateStock = (item) => {
+    setSelectedProduct(item); // Set the selected product for stock update
+    setShowAddStock(true); // Show the AddStock form
+  };
+
+
   return (
     <div className="vendor-products-container">
       <h2>Products</h2>
@@ -51,6 +74,7 @@ const Products = (props) => {
               <th>Product Category</th>
               <th>CURRENT STOCK</th>
               <th>LISTED PRICE</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -61,6 +85,7 @@ const Products = (props) => {
                 <td>{item.product?.category || 'N/A'}</td>
                 <td>{item.quantity || 'N/A'}</td>
                 <td>{item.price ? `Rs ${Number(item.price).toLocaleString()}` : 'N/A'}</td>
+                <td><button onClick={() => handleUpdateStock(item)} >Update Stock</button></td>
               </tr>
             ))}
           </tbody>
@@ -68,6 +93,14 @@ const Products = (props) => {
       ) : (
         <p>No products found in inventory.</p>
       )}
+
+      {showAddStock && (
+        <AddStock
+          selectedProduct={selectedProduct}
+          closeAddStock={() => setShowAddStock(false)}
+        />
+      )}
+      <button onClick={handleAddStock}>Add Stock</button>
     </div>
   );
 };

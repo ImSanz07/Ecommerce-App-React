@@ -43,24 +43,36 @@
       "gstin": "1234",
       "location": "Santacruz West",
       "rating": 4.5
-    }
-  ],
-  "inventory":[
-    {
-      "id": "i1",
-      "productId": "7f4f",
-      "sellerId": "bbb5",
-      "gstin": "5678",
-      "price": 75000,
-      "quantity": 35
     },
     {
-      "id": "i2",
+      "id": "0f41",
+      "businessName": "Rajput Rifles",
+      "gstin": "181212",
+      "location": "Jalgaon",
+      "rating": 4.5
+    }
+  ],
+  "inventory": [
+    {
+      "id": "d219",
       "productId": "7f4f",
-      "sellerId": "444b",
-      "gstin": "8970",
-      "price": 74000,
-      "quantity": 23
+      "sellerId": "5678",
+      "quantity": "35",
+      "price": "75000"
+    },
+    {
+      "id": "d217",
+      "productId": "7f4f",
+      "sellerId": "1234",
+      "quantity": "40",
+      "price": "55000"
+    },
+    {
+      "id": "d218",
+      "productId": "a69f",
+      "sellerId": "5678",
+      "quantity": "30",
+      "price": "75000"
     }
   ]
 }

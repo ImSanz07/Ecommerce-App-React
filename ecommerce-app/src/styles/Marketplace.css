@@ -1,0 +1,82 @@
+/* Container */
+.marketplace-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.marketplace-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table */
+.marketplace-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.marketplace-container th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.marketplace-container th {
+    background-color: #007bff;
+    color: white;
+}
+
+.marketplace-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.marketplace-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Message when no products */
+.marketplace-container p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Loading and Error Message */
+.marketplace-container .loading,
+.marketplace-container .error {
+    font-size: 18px;
+    color: #ff6f61;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.marketplace-container input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: fit-content;
+}
+
+.marketplace-container button {
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.marketplace-container button:hover {
+    background: #0056b3;
+}

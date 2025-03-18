@@ -7,6 +7,7 @@ import { NavLink, Route, Routes } from 'react-router-dom';
 import RegisterVendor from './Vendor/RegisterVendor';
 import Inventory from './Vendor/Inventory';
 import ValidateVendor from './Vendor/ValidateVendor';
+import Cart from './Cart/Cart';
 
 
 export const Home = () => {
@@ -48,6 +49,9 @@ export const Home = () => {
 
 
                     <Route path='/admin' element={<Admin />}></Route>
+
+                    <Route path='/marketplace/cart' element={<Cart />}></Route>
+
 
 
                 </Routes>
